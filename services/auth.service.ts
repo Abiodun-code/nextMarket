@@ -15,10 +15,7 @@ export const authService = {
 },
 
   async register(payload: RegisterPayload) {
-    const { data } = await api.post<AuthResponse>(
-      "/users/add",
-      payload
-    );
+    const { data } = await api.post<AuthResponse>("/users/add",payload);
 
     return data;
   },

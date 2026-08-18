@@ -16,7 +16,7 @@ import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { getInitials } from "@/lib/getInitials";
 import { LogOut, Settings, User } from "lucide-react";
 import Link from "next/link";
-import NavbarNotification from "./navbar-notification";
+import NavbarCart from "./navbar-cart";
 
 const NavBar = () => {
   const { data: user } = useCurrentUser();
@@ -61,7 +61,7 @@ const NavBar = () => {
               </DropdownMenuGroup>
             </DropdownMenuContent>
           </DropdownMenu>
-          <NavbarNotification/>
+          <NavbarCart/>
         </div>
       </div>
     </div>
