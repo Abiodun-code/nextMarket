@@ -50,7 +50,7 @@ const ProductList = ({ product }: Prop) => {
             Product Detail
           </SheetTitle>
         </SheetHeader>
-        <ProductDetail/>
+        <ProductDetail product={product}/>
         <SheetFooter>
           <Button
             size={"lg"}

@@ -30,7 +30,7 @@ const NavBar = () => {
       <div className="flex items-center justify-between">
         <Image src={logo} alt="logo image" className="w-20" />
         <div className="flex items-center gap-2">
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger render={
               <Avatar size="lg" className="cursor-pointer">
                 <AvatarImage src={user?.image} />
@@ -60,7 +60,7 @@ const NavBar = () => {
                 </DropdownMenuItem>
               </DropdownMenuGroup>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
           <NavbarCart/>
         </div>
       </div>
