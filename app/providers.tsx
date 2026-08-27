@@ -2,8 +2,6 @@
 
 "use client";
 
-import { useCurrentUser } from "@/hooks/useCurrentUser";
-import { useAuthStore } from "@/stores/auth.store";
 import {
   QueryClient,
   QueryClientProvider,
