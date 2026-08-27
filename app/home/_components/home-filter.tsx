@@ -16,24 +16,33 @@ interface Prop {
 const HomeFilter = ({selectedCategory, setCategory, categories}:Prop) => {
   return (
     <Select
-      value={selectedCategory ?? "all"}
+      value={selectedCategory ?? "all categories"}
       onValueChange={(value) =>
-        setCategory(value === "all" ? null : value)
+        setCategory(value === "all categories" ? null : value)
       }
     >
-      <SelectTrigger className="h-12 rounded-3xl sm:w-52 shadow-sm">
+      <SelectTrigger className="py-5 rounded-3xl sm:w-52 shadow-sm font-poppins capitalize">
         <SelectValue placeholder="All categories" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="all">All categories</SelectItem>
+        <SelectItem
+          value="all categories"
+          className={"font-poppins text-sm font-light cursor-pointer"}
+        >
+          All categories
+        </SelectItem>
         {categories.map((category) => (
-          <SelectItem key={category} value={category}>
-           {category.charAt(0).toUpperCase() + category.slice(1)}
+          <SelectItem
+            key={category}
+            value={category}
+            className={"font-poppins text-sm font-light cursor-pointer"}
+          >
+            {category.charAt(0).toUpperCase() + category.slice(1)}
           </SelectItem>
         ))}
       </SelectContent>
     </Select>
-  )
+  );
 }
 
 export default HomeFilter

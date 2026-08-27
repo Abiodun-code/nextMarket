@@ -37,7 +37,7 @@ const HomePage = () => {
     paginatedData,
     nextPage,
     prevPage,
-  } = usePagination(filtered, 15);
+  } = usePagination(filtered, 16);
 
   if (isLoading) {
     return (
@@ -59,14 +59,14 @@ const HomePage = () => {
     <div className="max-w-[95%] mx-auto">
       <NavBar />
 
-      <div className="pt-5 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+      <div className="pt-5 flex flex- sm:flex-row gap-3 items-stretch sm:items-center">
         <div className="relative max-w-xl w-full">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search products..."
-            className="pl-11 h-12 rounded-3xl border-muted-foreground/20 bg-background shadow-sm focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-0"
+            className="pl-11 h-10 rounded-3xl border-muted-foreground/20 font-poppins font-light bg-background shadow-sm focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-0"
           />
         </div>
 
